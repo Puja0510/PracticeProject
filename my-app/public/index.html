@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -41,4 +41,26 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebRTC Demo</title>
+  <style>
+    video { width: 45%; margin: 10px; border: 1px solid #ccc; }
+    button { margin: 10px; }
+  </style>
+</head>
+<body>
+  <h2>WebRTC Video Call Demo</h2>
+  <video id="localVideo" autoplay muted></video>
+  <video id="remoteVideo" autoplay></video>
+  <br>
+  <button onclick="startCall()">Start Call</button>
+  <button onclick="endCall()">Cut Call</button>
+</body>
+<script src="script.js"></script>
 </html>
+
