@@ -37,7 +37,9 @@ const LoadMoreOnScroll = lazy(() => import('./RealLifeExample/LoadMoreOnScroll')
 const Pagination = lazy(() => import('./RealLifeExample/Pagination'))
 const DesignGrid = lazy(() => import('./RealLifeExample/GridDesign'))
 const SquareInCenter = lazy(() => import('./RealLifeExample/SquareInCenter'))
+const ChangeLang = lazy(() => import('./components/ChangeLang/index'))
 {/*Real Life Examples*/}
+
 
 function App() {
   return (
@@ -74,6 +76,7 @@ function App() {
             <Route path="/mycomp" element={<MyComponent />} />
 
             <Route path="/strans" element={<StringTransform />} />
+            <Route path="/lang" element={<ChangeLang />} />
 
             <Route path="/themeCheck" element={<ThemeCheck />} />
             <Route path="/" element={<Home />} />

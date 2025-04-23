@@ -1,7 +1,6 @@
 import React from "react";
 
 const SquareInCenter = () => {
-    const [showBox, setShowBox] = React.useState(false)
     const [squareBox, setSquareBox] = React.useState([])
     const [count, setCount] = React.useState()
 

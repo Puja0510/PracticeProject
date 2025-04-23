@@ -3,13 +3,22 @@ import ReactDOM from "react-dom";
 
 const Modal = ({ message, onClose }) => {
   const modalRoot = document.getElementById("modal-root");
+  const [showModel, setShowModel] = React.useState(true)
+
+  React.useEffect(() => {
+    setShowModel(true)
+  }, [])
+
+  const handleView = () => {
+    setShowModel(false)
+  }
   
   if (!modalRoot) {
     console.error("Modal root element not found!");
     return null; // Prevent rendering if modal-root is missing
   }
 
-  return ReactDOM.createPortal(
+  return ReactDOM.createPortal( showModel &&
     <div
       style={{
         position: "fixed",
@@ -22,7 +31,7 @@ const Modal = ({ message, onClose }) => {
       }}
     >
       <h3>{message}</h3>
-      <button onClick={onClose}>Close</button>
+      <button onClick={handleView}>Close</button>
     </div>,
     modalRoot
   );
