@@ -6,7 +6,6 @@ function Timer() {
 
   const handleStart = () => {
     const id = setInterval(() => {
-      console.log("timerrr", timer + 1);
       setTimer((prev) => prev + 1);
     }, 1000);
     setId(id);

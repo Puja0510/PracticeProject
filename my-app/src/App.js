@@ -38,6 +38,7 @@ const Pagination = lazy(() => import('./RealLifeExample/Pagination'))
 const DesignGrid = lazy(() => import('./RealLifeExample/GridDesign'))
 const SquareInCenter = lazy(() => import('./RealLifeExample/SquareInCenter'))
 const ChangeLang = lazy(() => import('./components/ChangeLang/index'))
+const MultiWizardForm = lazy(() => import('./RealLifeExample/MultiWizardForm'))
 {/*Real Life Examples*/}
 
 
@@ -55,6 +56,7 @@ function App() {
               <Route path="/pagination" element={<Pagination/>} />
               <Route path="/grid" element={<DesignGrid/>} />
               <Route path="/center" element={<SquareInCenter/>} />
+              <Route path="/mul" element={<MultiWizardForm/>} />
               {/*Real Life Examples*/}
             <Route path="/fetchdata" element={<FetchData />} />
             <Route path="/logstate" element={<LogStateChange />} />
