@@ -1,10 +1,25 @@
-let str = "hello how is the weather today"
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-function getFirst(str){
-    let word = str.split("")
-    console.log(word)
-    for(let i = word.length - 1; i > 0; i--){
-        console.log("mmmm", word[i])
-    }
-}
-console.log(getFirst(str))
+const Test = () => {
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    console.log("useEffect");
+    const getData = () => {
+      try {
+        const resp = axios.get("https://dummyjson.com/products");
+        console.log("res", resp.products);
+        const data = resp.data;
+        setProduct(data);
+      } catch (e) {
+        console.log("error", e);
+      }
+    };
+    getData();
+  }, []);
+
+  return <div>Fetch DAta</div>;
+};
+
+export default Test;

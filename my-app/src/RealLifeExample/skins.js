@@ -70,4 +70,78 @@ export const Wrapper = styled.div`
 export const Btn = styled.div`
  display: flex;
  justify-content: space-between;
-`
+`;
+
+export const TrackBoardContainer = styled.div`
+
+`;
+
+export const TrackBoardHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center; 
+  padding: 20px;
+`;
+
+export const TrackBoardContent = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;      /* center vertically */
+  width: 100%;
+  padding: 20px;
+`;
+
+export const AddTaskButton = styled.button`
+  height: 35px;
+  width: 10%;
+  margin-left: 10px;
+  color: white;
+  background-color: green;
+  border: none;
+
+`;
+
+export const Input = styled.input`
+  height: 30px;
+  width: 20%;
+  border: 1px solid blue;
+  outline: none;
+ &:focus {
+    border: 2px solid green;
+    box-shadow: 0 0 4px rgba(0, 0, 255, 0.5); /* optional glow effect */
+  }
+`;
+
+export const TaskList = styled.div`
+  margin: 24px;
+
+`;
+
+export const Task = styled.div`
+ display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;   /* keeps children vertically aligned */
+
+  flex: 1;               /* allows it to grow/shrink in flex layouts */
+  width: 100%;           /* take full width of parent */
+  height: auto;          /* flexible height based on content */
+  min-height: 50px;      /* optional, ensures it's not too small */
+  padding: 10px;         /* spacing inside */
+  box-sizing: border-box;
+`;
+
+export const ColDisplay = styled.div`
+ display: flex;
+ justify-content: space-evenly;
+ flex-direction: column;
+ border: 1px solid blue;
+ flex: 1;
+ width: 100%;
+ height: auto;
+ min-height: 50px;
+ align-content: center;
+ align-items: center;
+`;

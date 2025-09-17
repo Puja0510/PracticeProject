@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LogStateChange = React.lazy(() => import("./components/LogStateChange"));
 const Timer = lazy(() => import("./components/CleanupOnUnmount"));
@@ -30,6 +31,7 @@ const MemoizedComponent = lazy(() => import('./components/React.memo'))
 const DataFetcher = lazy(() => import('./components/FetchData'))
 const DataFetcher2 = lazy(() => import('./components/fetchData2'))
 const Test = lazy(() => import('./components/Test'))
+const Practise = lazy(() => import('./Bootstrap/Practise'))
 {/*Real Life Examples*/}
 const SearchInputField = lazy(() => import('./RealLifeExample/SearchInputField'))
 const SearchInputFieldVersion2 = lazy(() => import('./RealLifeExample/SearchInputFieldVersion2'))
@@ -39,6 +41,12 @@ const DesignGrid = lazy(() => import('./RealLifeExample/GridDesign'))
 const SquareInCenter = lazy(() => import('./RealLifeExample/SquareInCenter'))
 const ChangeLang = lazy(() => import('./components/ChangeLang/index'))
 const MultiWizardForm = lazy(() => import('./RealLifeExample/MultiWizardForm'))
+const InfiniteScroll = lazy(() => import('./RealLifeExample/InfiniteScroll'))
+const TrackBoard = lazy(() => import('./RealLifeExample/TrackBoard'))
+const ReactAdmin = lazy(() => import('./RealLifeExample/ReactAdmin'))
+const KanbanBoard = lazy(() => import("./RealLifeExample/KanbanBoard"))
+// const InfinitePaginationToggleApp = lazy(() => import('./RealLifeExample/InfinitePaginationToggleApp'))
+
 {/*Real Life Examples*/}
 
 
@@ -57,7 +65,14 @@ function App() {
               <Route path="/grid" element={<DesignGrid/>} />
               <Route path="/center" element={<SquareInCenter/>} />
               <Route path="/mul" element={<MultiWizardForm/>} />
+              <Route path="/scroll" element={<InfiniteScroll/>} />
+              <Route path="/track-board" element={<TrackBoard/>} />
+              <Route path="/admin" element={<ReactAdmin/>} />
+              <Route path="/kanban" element={<KanbanBoard/>} />
+              {/* <Route path="/scroll1" element={<InfinitePaginationToggleApp/>} /> */}
+             
               {/*Real Life Examples*/}
+            <Route path="/bot1" element={<Practise />} />
             <Route path="/fetchdata" element={<FetchData />} />
             <Route path="/logstate" element={<LogStateChange />} />
             <Route path="/timer" element={<Timer />} />

@@ -1,0 +1,146 @@
+/* Layout utilities */
+.layout-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 220px;
+  min-height: 300px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card.outlined {
+  border: 2px solid #ccc;
+}
+
+.card-text h4 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Input + Button */
+input.large {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #0d47a1;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Icon buttons */
+.icon-only {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.icon-only:hover {
+  color: #1976d2;
+}
+
+.icon-only.danger:hover {
+  color: #d32f2f;
+}
+
+.x-small {
+  font-size: 16px;
+  padding: 2px 4px;
+}
+
+.mx-2 {
+  margin: 0 6px;
+}
+
+/* Task list */
+ul.styled {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.styled li {
+  background: #f7f9fc;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Animation */
+.slide-up-fade-in {
+  animation: slideUpFade 0.3s ease forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
